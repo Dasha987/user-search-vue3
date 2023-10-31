@@ -27,8 +27,8 @@ export default {
     CardPeople
   },
   setup() {
-    const value = ref('')
     const store = useStore()
+    const value = ref(store.getters.getValueSearch)
     const send = () => {
       store.dispatch('setData', value.value)
     }

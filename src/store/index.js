@@ -5,7 +5,8 @@ export const store = createStore({
   state: {
     data: [],
     activeBlock: 0,
-    activeUser: {}
+    activeUser: {},
+    valueSearch: ''
   },
   getters: {
     getData(state) {
@@ -16,6 +17,9 @@ export const store = createStore({
     },
     getActiveUser(state) {
       return state.activeUser
+    },
+    getValueSearch(state) {
+      return state.valueSearch
     },
   },
   mutations: {
@@ -34,10 +38,14 @@ export const store = createStore({
     setActiveUser(state, user) {
       state.activeUser = user
     },
+    setValueSearch(state, valueSearch) {
+      state.valueSearch = valueSearch
+    },
   },
   actions: {
     setData({ commit }, value) {
       commit("setActiveBlock", 2)
+      commit("setValueSearch", value)
       const data = []
       //удаление повторяющихся элементов
       const valueArray = value.replaceAll(" ", "").split(",");

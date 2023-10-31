@@ -2,8 +2,8 @@
   <div class="cardList-wrapper">
     <h2 class="title">Результаты</h2>
     <div v-if="activeBlock == 0" class="msg">начните поиск</div>
-    <div v-if="activeBlock == 1" class="msg">ничего не найдено</div>
-    <div v-if="activeBlock == 2"><Spinner /></div>
+    <div v-else-if="activeBlock == 1" class="msg">ничего не найдено</div>
+    <div v-else-if="activeBlock == 2"><Spinner /></div>
     <div v-else class="cardList">
       <Card
         :user="user"
