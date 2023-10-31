@@ -1,0 +1,119 @@
+// тк мы к ним обращаемся везде ниже
+@import 'utils/vars';
+
+@font-face {
+  font-weight: 400;
+  font-family: Montserrat;
+  src: url('@/assets/fonts/Montserrat/Montserrat-Regular.ttf');
+}
+
+@font-face {
+  font-weight: 600;
+  font-family: Montserrat;
+  src: url('@/assets/fonts/Montserrat/Montserrat-SemiBold.ttf');
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: Montserrat;
+  src: url('@/assets/fonts/Montserrat/Montserrat-Bold.ttf');
+}
+
+html {
+  font-size: $mainFontSize;
+  color: $default-color;
+  height: 100%;
+  @media screen and (max-width: $desktopWidth) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: $tableWidth) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    font-size: 14px;
+  }
+}
+
+body {
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  background-color: $bg-color;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  border: 1px solid $border-base;
+  border-radius: 8px;
+  width: 100%;
+  padding: 14px 16px;
+}
+
+.msg {
+  color: $light-color;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.wrapper-content {
+  height: 100%;
+  .container {
+    margin-bottom: 44px;
+  }
+}
+
+.container {
+  position: relative;
+  flex: 0 0 auto;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  max-width: $lgDesktopWidth;
+  @media screen and (max-width: $lgDesktopWidth) {
+    padding: 0 16px;
+  }
+  @media screen and (max-width: $smDesktopWidth) {
+    max-width: $tableWidth;
+  }
+  @media screen and (max-width: $tableWidth) {
+    max-width: $smTableWidth;
+  }
+  @media screen and (max-width: $smTableWidth) {
+    max-width: $phoneWidth;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    max-width: $smPhoneWidth;
+  }
+}
+
+.content {
+  border-radius: $border-radius;
+  box-shadow: $border-shadow;
+  height: 575px;
+}
+
+@import './common/_common';

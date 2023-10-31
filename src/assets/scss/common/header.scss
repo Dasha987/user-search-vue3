@@ -1,0 +1,19 @@
+.header {
+  padding: 45px 0 26px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  font-size: 32px;
+  font-weight: 700;
+  color: $title-color;
+}
+
+.header-link {
+  font-size: 16px;
+}

@@ -1,0 +1,15 @@
+.cardList-wrapper,
+.cardList {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.cardList-wrapper {
+  height: 381px;
+}
+.cardList {
+  height: 350px;
+  overflow: auto;
+  padding: 5px;
+}

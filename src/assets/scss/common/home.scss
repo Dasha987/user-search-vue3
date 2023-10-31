@@ -1,0 +1,17 @@
+.home-wrapper {
+  display: flex;
+}
+
+.home-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+  margin: 30px 30px 30px 20px;
+}
+
+.home-search {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 240px;
+}

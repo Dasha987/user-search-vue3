@@ -1,0 +1,34 @@
+$border-radius-size: 14px;
+
+.card-wrapper {
+  max-width: 240px;
+  max-height: 70px;
+  border-radius: $border-radius;
+  box-shadow: $border-shadow;
+}
+
+.card {
+  display: flex;
+  gap: 15px;
+}
+
+.card-img {
+  max-width: 70px;
+}
+
+.card-info {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card-username {
+  font-weight: 600;
+}
+
+.card-email {
+  color: $light-color;
+  max-width: 120px;
+  overflow: hidden;
+}
