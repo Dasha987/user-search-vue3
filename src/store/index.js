@@ -39,13 +39,13 @@ export const store = createStore({
     setData({ commit }, value) {
       commit("setActiveBlock", 2)
       const data = []
+      //удаление повторяющихся элементов
+      const valueArray = value.replaceAll(" ", "").split(",");
+      const userNamesOrId = valueArray.filter((item, pos) => {
+        return valueArray.indexOf(item) == pos
+      })
       axios.get("https://jsonplaceholder.typicode.com/users")
         .then((res) => {
-          //удаление повторяющихся элементов
-          const valueArray = value.replaceAll(" ", "").split(",");
-          const userNamesOrId = valueArray.filter((item, pos) => {
-            return valueArray.indexOf(item) == pos
-          })
           //отбор людей согласно пришедшего отбора
           userNamesOrId.forEach((userNameOrId) => {
             const element = res.data.filter((elem) => {
